@@ -1,0 +1,30 @@
+# Participant-level data must remain outside this repository.
+# These patterns only reduce accidents; they do not protect history or forced adds.
+.env
+.env.*
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+private/
+raw/
+responses/
+contacts/
+transcripts/
+recordings/
+exports/
+outputs/
+*.jsonl
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.sqlite
+*.sqlite3
+*.db
+*.log
+*.wav
+*.mp3
+*.mp4
+*.m4a
+.DS_Store

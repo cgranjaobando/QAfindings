@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite this version of the research-material repository, not as an empirical findings paper."
+title: "QAFindings: protocol, instruments and analysis materials"
+authors:
+  - name: "cgranjaobando"
+version: 0.1.0
+date-released: 2026-09-20
+repository-code: "https://github.com/cgranjaobando/QAfindings"
+url: "https://github.com/cgranjaobando/QAfindings"
+keywords:
+  - quality assurance
+  - software engineering
+  - research protocol
+  - mixed methods
+  - privacy
+abstract: "Pre-data research materials. No participant findings, ethics approval or external preregistration are claimed."

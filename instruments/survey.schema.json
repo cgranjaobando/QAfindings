@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QAFindings survey analysis export v0.1.0",
+  "description": "Private analysis records only. Not a deployed form. Never publish real respondent-level records.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["protocol_version", "is_synthetic", "consent", "adult", "eligible_experience"],
+  "$defs": {
+    "frequency": {
+      "oneOf": [
+        {"type": "integer", "minimum": 0, "maximum": 4},
+        {"type": "string", "enum": ["DK", "NA", "SKIP"]}
+      ]
+    }
+  },
+  "x-frequency-items": ["P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08", "A01", "A02", "A03", "T01", "T02", "T03", "T04", "C01", "C02", "O01", "O02", "F01", "F02", "F03"],
+  "properties": {
+    "protocol_version": {"const": "0.1.0"},
+    "is_synthetic": {"type": "boolean"},
+    "consent": {"type": "boolean"},
+    "adult": {"type": "boolean"},
+    "eligible_experience": {"type": "boolean"},
+    "role": {"type": "string", "enum": ["QA", "DEV", "PRODUCT", "LEAD", "OTHER", "SKIP"]},
+    "experience": {"type": "string", "enum": ["LT2", "2_5", "6_10", "GT10", "SKIP"]},
+    "company_size": {"type": "string", "enum": ["1_49", "50_249", "250_999", "1000_PLUS", "DK", "SKIP"]},
+    "framework": {"type": "string", "enum": ["SCRUM", "KANBAN", "HYBRID", "SEQUENTIAL", "NONE", "OTHER", "DK", "SKIP"]},
+    "qa_role_present": {"type": "string", "enum": ["YES", "NO", "DK", "SKIP"]},
+    "release_cadence": {"type": "string", "enum": ["DAILY", "WEEKLY", "MONTHLY", "LESS", "IRREGULAR", "DK", "SKIP"]},
+    "earliest_quality": {"type": "string", "enum": ["PROBLEM", "REFINEMENT", "IMPLEMENTATION", "PRERELEASE", "POSTRELEASE", "NOTOBSERVED", "DK", "SKIP"]},
+    "ticket_state": {"type": "string", "enum": ["OPEN", "CHANGEABLE", "FIXED", "MIXED", "DK", "SKIP"]},
+    "P01": {"$ref": "#/$defs/frequency"},
+    "P02": {"$ref": "#/$defs/frequency"},
+    "P03": {"$ref": "#/$defs/frequency"},
+    "P04": {"$ref": "#/$defs/frequency"},
+    "P05": {"$ref": "#/$defs/frequency"},
+    "P06": {"$ref": "#/$defs/frequency"},
+    "P07": {"$ref": "#/$defs/frequency"},
+    "P08": {"$ref": "#/$defs/frequency"},
+    "A01": {"$ref": "#/$defs/frequency"},
+    "A02": {"$ref": "#/$defs/frequency"},
+    "A03": {"$ref": "#/$defs/frequency"},
+    "T01": {"$ref": "#/$defs/frequency"},
+    "T02": {"$ref": "#/$defs/frequency"},
+    "T03": {"$ref": "#/$defs/frequency"},
+    "T04": {"$ref": "#/$defs/frequency"},
+    "C01": {"$ref": "#/$defs/frequency"},
+    "C02": {"$ref": "#/$defs/frequency"},
+    "O01": {"$ref": "#/$defs/frequency"},
+    "O02": {"$ref": "#/$defs/frequency"},
+    "F01": {"$ref": "#/$defs/frequency"},
+    "F02": {"$ref": "#/$defs/frequency"},
+    "F03": {"$ref": "#/$defs/frequency"}
+  }
+}
